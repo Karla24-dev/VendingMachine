@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "NNRQK5l9AX/4qBnyTFwXV/turV47qrk3Ws5WvGrteiA=",
+  "Source": "VendingMachine.Service",
+  "BasePath": "_content/VendingMachine.Service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
