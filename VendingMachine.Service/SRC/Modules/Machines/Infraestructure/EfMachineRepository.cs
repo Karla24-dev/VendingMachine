@@ -55,7 +55,6 @@ public class EfMachineRepository(VendingDbContext db) : IMachineRepository
         existing.Address = machine.Address;
         existing.NumberOfRows = machine.NumberOfRows;
         existing.NumberOfColumns = machine.NumberOfColumns;
-        existing.MaxCapacity = machine.MaxCapacity;
         existing.InstallationDate = machine.InstallationDate;
 
         await db.SaveChangesAsync();

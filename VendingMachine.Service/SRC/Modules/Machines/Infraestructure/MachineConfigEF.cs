@@ -11,5 +11,15 @@ public class MachineConfigEF : IEntityTypeConfiguration<Machine>
         entity.ToTable("machines");
         entity.HasKey(m => m.Id);
         entity.Property(m => m.Id).ValueGeneratedOnAdd();
+        // Campos obligatorios (IsRequired = no pueden quedar vacíos)
+        entity.Property(m => m.Name).IsRequired();
+        entity.Property(m => m.Status).IsRequired();
+        entity.Property(m => m.Address).IsRequired();
+        entity.Property(m => m.NumberOfRows).IsRequired();
+        entity.Property(m => m.NumberOfColumns).IsRequired();
+        entity.Property(m => m.InstallationDate).IsRequired();
+
+        // Imagen opcional (puede quedar vacía)
+        entity.Property(m => m.ImageUrl).IsRequired(false);
     }
 }

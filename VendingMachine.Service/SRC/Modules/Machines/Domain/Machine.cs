@@ -9,7 +9,7 @@ public class Machine(
     string address,
     int numberOfRows,
     int numberOfColumns,
-    int maxCapacity,
+
     DateTime installationDate
     )
 {
@@ -20,6 +20,5 @@ public class Machine(
     public int Id { get; set; }
     public int NumberOfRows { get; set; } = numberOfRows;
     public int NumberOfColumns { get; set; } = numberOfColumns;
-    public int MaxCapacity { get; set; } = maxCapacity;
     public DateTime InstallationDate { get; set; } = installationDate;
 }

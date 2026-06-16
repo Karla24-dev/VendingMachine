@@ -22,15 +22,14 @@ public class MachineService
             status: request.Status ?? "Active",
             imageUrl: request.ImageUrl ?? "",
             address: request.Address,
-            nRows: request.NumberOfRows,
-            nColumns: request.NumberOfColumns,
-            capacity: request.NumberOfRows * request.NumberOfColumns,
+            numberOfRows: request.NumberOfRows,
+            numberOfColumns: request.NumberOfColumns,
             installationDate: request.InstallationDate
         );
 
         // Llamar al método de tu interfaz
         var created = await _repository.CreateNewMachine(machine);
-        
+
         return created;
     }
 }
