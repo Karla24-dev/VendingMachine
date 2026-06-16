@@ -1,4 +1,3 @@
-
 using VendingMachine.Service.Service.Machines;
 
 namespace VendingMachine.Service.Domain.Machines;
@@ -8,9 +7,9 @@ public class Machine(
     string status,
     string imageUrl,
     string address,
-    int nRows,
-    int nColumns,
-    int capacity,
+    int numberOfRows,
+    int numberOfColumns,
+    int maxCapacity,
     DateTime installationDate
     )
 {
@@ -18,9 +17,9 @@ public class Machine(
     public string Status { get; set; } = status;
     public string ImageUrl { get; set; } = imageUrl;
     public string Address { get; set; } = address;
-    public int Id{get;set;}
-    public int NumberOfRows { get; set; } = nRows;
-    public int NumberOfColumns { get; set; } = nColumns;
-    public int MaxCapacity { get; set; } = capacity;
+    public int Id { get; set; }
+    public int NumberOfRows { get; set; } = numberOfRows;
+    public int NumberOfColumns { get; set; } = numberOfColumns;
+    public int MaxCapacity { get; set; } = maxCapacity;
     public DateTime InstallationDate { get; set; } = installationDate;
 }
