@@ -5,15 +5,8 @@ using VendingMachine.Service.Modules.Machines.Application.Interfaces;
 using VendingMachine.Service.Machines.Service;
 
 
-public class MachineService
+public class MachineService(IMachineRepository repository)
 {
-    private readonly IMachineRepository _repository;
-
-    public MachineService(IMachineRepository repository)
-    {
-        _repository = repository;
-    }
-
     public async Task<Machine> CreateNewMachine(CreateMachineRequest request)
     {
         // Crear la máquina usando tu constructor
@@ -28,7 +21,7 @@ public class MachineService
         );
 
         // Llamar al método de tu interfaz
-        var created = await _repository.CreateNewMachine(machine);
+        var created = await repository.CreateNewMachine(machine);
 
         return created;
     }
