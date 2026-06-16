@@ -10,4 +10,14 @@ La idea es tambien hacer el front en Angular, la idea es q sea web y movil.
 como no puedo pagar una db, se hizo coneccion con google sheets, quiero en su momneto subir el back
 pero todavia no se como para no pagar :3 . 
 
+
+secretos de usuario
+
+dotnet user-secrets init
+dotnet user-secrets set "DBCONFIG:URL" "aws-1-us-east-1.pooler.supabase.com"
+dotnet user-secrets set "DBCONFIG:PORT" "5432"
+dotnet user-secrets set "DBCONFIG:NAME" "postgres"
+dotnet user-secrets set "DBCONFIG:USER" "postgres.xrkpsiusxxxczuhrybzs"
+dotnet user-secrets set "DBCONFIG:PASSWORD" "SupaDBKarla123."
+
 <img width="1012" height="446" alt="image" src="https://github.com/user-attachments/assets/59cc116f-c009-4e09-bf6b-b339fd95e97c" />
