@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using VendingMachine.Inventories.Domain;
+using VendingMachine.Products.Domain;
 using VendingMachine.Service.Domain.Machines;
 
 namespace VendingMachine.Service.Shared;
@@ -6,7 +8,12 @@ namespace VendingMachine.Service.Shared;
 public class VendingDbContext(DbContextOptions<VendingDbContext> options) : DbContext(options)
 {
     // cada dnset es una tabla
-    public DbSet<Machine> Machines => Set<Machine>();
+    // Aqui debes agregar una dbset or cada entidad q hagas
+    public DbSet<Machine> Machines => Set<Machine>(); 
+    public DbSet<Product> Products => Set<Product>(); 
+    public DbSet<ProductComponent> ProductComponents => Set<ProductComponent>(); 
+    public DbSet<Inventory> Inventories => Set<Inventory>(); 
+    public DbSet<InventoryProduct> InventoryProducts => Set<InventoryProduct>(); 
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
