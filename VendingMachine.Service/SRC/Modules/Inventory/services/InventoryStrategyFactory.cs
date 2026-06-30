@@ -1,0 +1,14 @@
+using VendingMachine.Inventories.Domain;
+using VendingMachine.Service.Shared;
+
+namespace VendingMachine.Inventories.Servis.Strategies;
+
+public class InventoryStrategyFactory(VendingDbContext db)
+{
+    public IAddProductStrategy GetStrategy(InventoryType type) => type switch
+    {
+        InventoryType.WareHouse => new WareHouseStrategy(db),
+        InventoryType.Machine   => new MachineStrategy(db),
+        _ => throw new ArgumentException($"Tipo de inventario no soportado: {type}")
+    };
+}

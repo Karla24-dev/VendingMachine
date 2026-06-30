@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using VendingMachine.Service.Shared.db.Service;
 using VendingMachine.Products.Servis;
 using VendingMachine.Inventories.Servis;
+using VendingMachine.Inventories.Servis.Strategies;
 
 namespace VendingMachine.Service.Configuration;
 
@@ -34,6 +35,9 @@ public static class DependencyInjection
 
         services.AddScoped<IProductRepository, EfProductRepository>();
         services.AddScoped<ProductService>();
+
+        services.AddScoped<InventoryStrategyFactory>();
+        services.AddScoped<InventoryProductService>();
 
         return services;
     }
