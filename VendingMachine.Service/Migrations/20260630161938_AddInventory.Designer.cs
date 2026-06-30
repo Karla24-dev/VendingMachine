@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using VendingMachine.Service.Shared;
@@ -11,9 +12,11 @@ using VendingMachine.Service.Shared;
 namespace VendingMachine.Service.Migrations
 {
     [DbContext(typeof(VendingDbContext))]
-    partial class VendingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260630161938_AddInventory")]
+    partial class AddInventory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
