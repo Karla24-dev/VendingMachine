@@ -17,7 +17,7 @@ public class Machine(
     public string Status { get; set; } = status;
     public string ImageUrl { get; set; } = imageUrl;
     public string Address { get; set; } = address;
-    public int Id { get; set; }
+    public Guid Id { get; set; } = Guid.NewGuid();
     public int NumberOfRows { get; set; } = numberOfRows;
     public int NumberOfColumns { get; set; } = numberOfColumns;
     public DateTime InstallationDate { get; set; } = installationDate;

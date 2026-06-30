@@ -10,7 +10,7 @@ public class MachineConfigEF : IEntityTypeConfiguration<Machine>
     {
         entity.ToTable("machines");
         entity.HasKey(m => m.Id);
-        entity.Property(m => m.Id).ValueGeneratedOnAdd();
+        entity.Property(m => m.Id).ValueGeneratedNever();
         // Campos obligatorios (IsRequired = no pueden quedar vacíos)
         entity.Property(m => m.Name).IsRequired();
         entity.Property(m => m.Status).IsRequired();
