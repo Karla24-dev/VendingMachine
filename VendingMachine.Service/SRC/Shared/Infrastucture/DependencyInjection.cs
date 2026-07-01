@@ -32,7 +32,7 @@ public static class DependencyInjection
         services.AddScoped<ProductService>();
 
         services.AddScoped<IInventoryRepository, EfInventoryRepository>();
-        services.AddScoped<InventoryService>();
+        services.AddScoped<CreateInventoryService>();
 
         services.AddScoped<IProductRepository, EfProductRepository>();
         services.AddScoped<ProductService>();

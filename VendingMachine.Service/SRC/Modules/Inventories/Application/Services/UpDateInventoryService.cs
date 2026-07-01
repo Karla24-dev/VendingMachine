@@ -2,36 +2,17 @@ using VendingMachine.Inventories.Domain;
 
 namespace VendingMachine.Inventories.Application;
 
-public class InventoryService(IInventoryRepository repository)
+public class UpDateInventoryService(IInventoryRepository repository):IUpDateInventoryService
 {
-    public async Task<Inventory> CreateInventory(Inventory inventory)
-    {
-        ValidateInventory(inventory);
-        return await repository.CreateInventory(inventory);
-    }
-
-    public async Task<IEnumerable<Inventory>> ShowInventories()
-    {
-        return await repository.ShowInventories();
-    }
-
-    public async Task<Inventory?> FindInventoryById(Guid inventoryId)
-    {
-        return await repository.FindInventoryById(inventoryId);
-    }
-
-    public async Task DeleteInventory(Guid inventoryId)
-    {
-        await repository.DeleteInventory(inventoryId);
-    }
-
     public async Task<Inventory> PatchInventoryById(Guid inventoryId, Inventory inventory)
     {
-        ValidateInventory(inventory);
+        InventoryValidator.Validate(inventory);
         return await repository.PatchInventoryById(inventoryId, inventory);
     }
-
-    private void ValidateInventory(Inventory inventory)
+}
+internal static class InventoryValidator
+{
+    public static void Validate(Inventory inventory)
     {
         if (string.IsNullOrWhiteSpace(inventory.Name))
             throw new ArgumentException("El nombre del inventario es obligatorio.");
