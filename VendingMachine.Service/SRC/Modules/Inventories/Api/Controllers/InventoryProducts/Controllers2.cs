@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using VendingMachine.Inventories.Application;
 using VendingMachine.Inventories.Domain;
-using VendingMachine.Inventories.Servis;
 
 namespace VendingMachine.Inventories.Api;
 

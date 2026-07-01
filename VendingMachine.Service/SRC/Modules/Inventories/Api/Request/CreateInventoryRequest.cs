@@ -1,3 +1,5 @@
+using VendingMachine.Inventories.Domain;
+
 namespace VendingMachine.Inventories.Api;
 
 public class CreateInventoryRequest

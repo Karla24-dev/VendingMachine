@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using VendingMachine.Inventories.Application;
 using VendingMachine.Inventories.Domain;
-using VendingMachine.Inventories.Servis;
 
 namespace VendingMachine.Inventories.Api;
 
@@ -27,10 +27,7 @@ public class InventoriesController(InventoryService service) : ControllerBase
     public async Task<ActionResult> FindInventoryById(Guid id)
     {
         var inventory = await service.FindInventoryById(id);
-        if (inventory == null)
-            return NotFound();
-
-        return Ok(inventory);
+        return inventory is null ? NotFound() : Ok(inventory);
     }
 
     [HttpDelete("{id}")]

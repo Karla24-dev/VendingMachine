@@ -1,3 +1,6 @@
+using VendingMachine.Inventories.Domain;
+using VendingMachine.Service.Shared;
+
 namespace VendingMachine.Inventories.Application;
 
 public class MachineStrategy(VendingDbContext db) : IAddProductStrategy
