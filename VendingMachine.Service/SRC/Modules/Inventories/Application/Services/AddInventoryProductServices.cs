@@ -2,9 +2,9 @@ using VendingMachine.Inventories.Domain;
 
 namespace VendingMachine.Inventories.Application;
 
-public class InventoryProductService(
+public class AddInventoryProductService(
     IInventoryRepository inventoryRepository,
-    InventoryStrategyFactory strategyFactory)
+    InventoryStrategyFactory strategyFactory):IAddProductToInventory
 {
     public async Task<InventoryProduct> AddProductToInventory(InventoryProduct inventoryProduct)
     {
