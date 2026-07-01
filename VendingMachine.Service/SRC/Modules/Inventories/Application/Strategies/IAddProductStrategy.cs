@@ -1,6 +1,4 @@
-using VendingMachine.Inventories.Domain;
-
-namespace VendingMachine.Inventories.Servis.Strategies;
+namespace VendingMachine.Inventories.Application;
 
 public interface IAddProductStrategy
 {

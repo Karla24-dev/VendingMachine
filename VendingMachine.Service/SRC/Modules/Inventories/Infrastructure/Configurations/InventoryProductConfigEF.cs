@@ -1,9 +1,4 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using VendingMachine.Inventories.Domain;
-using VendingMachine.Products.Domain;
-
-namespace VendingMachine.Products.Infraestructure;
+namespace VendingMachine.Inventories.Infraestructure;
 
 public class InventoryProductConfigEF : IEntityTypeConfiguration<InventoryProduct>
 {

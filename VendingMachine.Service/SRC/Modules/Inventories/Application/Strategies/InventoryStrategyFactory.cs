@@ -1,7 +1,4 @@
-using VendingMachine.Inventories.Domain;
-using VendingMachine.Service.Shared;
-
-namespace VendingMachine.Inventories.Servis.Strategies;
+namespace VendingMachine.Inventories.Application;
 
 public class InventoryStrategyFactory(VendingDbContext db)
 {

@@ -1,6 +1,4 @@
-using VendingMachine.Inventories.Domain;
-
-namespace VendingMachine.Inventories.Servis;
+namespace VendingMachine.Inventories.Application;
 
 public class InventoryService(IInventoryRepository repository)
 {

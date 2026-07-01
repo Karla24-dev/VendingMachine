@@ -1,8 +1,4 @@
-using Microsoft.EntityFrameworkCore;
-using VendingMachine.Inventories.Domain;
-using VendingMachine.Service.Shared;
-
-namespace VendingMachine.Inventories.Servis;
+namespace VendingMachine.Inventories.Infraestructure;
 
 public class EfInventoryRepository(VendingDbContext db) : IInventoryRepository
 {
