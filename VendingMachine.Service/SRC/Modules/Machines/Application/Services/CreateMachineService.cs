@@ -3,7 +3,7 @@ using VendingMachine.Machines.Domain;
 
 namespace VendingMachine.Machines.Application;
 
-public class MachineService(IMachineRepository repository)
+public class CreateMachineService(IMachineRepository repository)
 {
     public async Task<Machine> CreateNewMachine(CreateMachineRequest request)
     {

@@ -5,12 +5,12 @@ namespace VendingMachine.Machines.Api;
 
 [ApiController]
 [Route("Machines")]
-public class MachinesPostController(MachineService service) : ControllerBase
+public class CreateMachinesController(ICreateMachineService iService) : ControllerBase
 {
     [HttpPost]
     public async Task<ActionResult> CreateMachine([FromBody] CreateMachineRequest request)
     {
-        var created = await service.CreateNewMachine(request);
+        var created = await iService.CreateNewMachine(request);
         return Ok(created);
     }
 }

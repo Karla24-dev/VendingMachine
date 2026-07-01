@@ -27,7 +27,7 @@ public static class DependencyInjection
         services.AddScoped<IMachineRepository, EfMachineRepository>();
 
         // Services
-        services.AddScoped<MachineService>();
+        services.AddScoped<CreateMachineService>();
         services.AddScoped<IProductRepository, EfProductRepository>();
         services.AddScoped<ProductService>();
 
