@@ -6,12 +6,12 @@ namespace VendingMachine.Products.Api;
 
 [ApiController]
 [Route("Products")]
-public class DeleteProductsController(ProductService service) : ControllerBase
+public class DeleteProductsController(IDeleteProductsService iService) : ControllerBase
 {
     [HttpDelete("{id}")]
     public async Task<ActionResult> DeleteProduct(Guid id)
     {
-        await service.DeleteProduct(id);
+        await iService.DeleteProduct(id);
         return NoContent();
     }
 }

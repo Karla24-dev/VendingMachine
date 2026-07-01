@@ -6,49 +6,8 @@ namespace VendingMachine.Products.Api;
 
 [ApiController]
 [Route("Products")]
-public class UpDateProductsController(ProductService service) : ControllerBase
+public class UpDateProductsController(IUpDateProductsService iService) : ControllerBase
 {
-    [HttpPost]
-    public async Task<ActionResult> CreateProduct([FromBody] CreateProductRequest request)
-    {
-        var product = new Product(
-            request.Name,
-            request.Reference,
-            request.PackageBag,
-            request.PackageType,
-            request.PurchasePrice,
-            request.SalePrice,
-            request.ImageUrl
-        );
-
-        var created = await service.CreateProduct(product);
-        return Ok(created);
-    }
-
-    [HttpGet]
-    public async Task<ActionResult> ShowProducts()
-    {
-        var products = await service.ShowProducts();
-        return Ok(products);
-    }
-
-    [HttpGet("{id}")]
-    public async Task<ActionResult> FindProductById(Guid id)
-    {
-        var product = await service.FindProductById(id);
-        if (product == null)
-            return NotFound();
-
-        return Ok(product);
-    }
-
-    [HttpDelete("{id}")]
-    public async Task<ActionResult> DeleteProduct(Guid id)
-    {
-        await service.DeleteProduct(id);
-        return NoContent();
-    }
-
     [HttpPatch("{id}")]
     public async Task<ActionResult> PatchProductById(Guid id, [FromBody] CreateProductRequest request)
     {
@@ -62,7 +21,7 @@ public class UpDateProductsController(ProductService service) : ControllerBase
             request.ImageUrl
         );
 
-        var updated = await service.PatchProductById(id, product);
+        var updated = await iService.PatchProductById(id, product);
         return Ok(updated);
     }
 }

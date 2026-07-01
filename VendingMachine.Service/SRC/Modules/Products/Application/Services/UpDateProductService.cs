@@ -2,36 +2,17 @@ using VendingMachine.Products.Domain;
 
 namespace VendingMachine.Products.Application;
 
-public class ProductService(IProductRepository repository)
+public class UpDateProductService(IProductRepository repository):IUpDateProductsService
 {
-    public async Task<Product> CreateProduct(Product product)
-    {
-        ValidateProduct(product);
-        return await repository.CreateProduct(product);
-    }
-
-    public async Task<IEnumerable<Product>> ShowProducts()
-    {
-        return await repository.ShowProducts();
-    }
-
-    public async Task<Product?> FindProductById(Guid productId)
-    {
-        return await repository.FindProductById(productId);
-    }
-
-    public async Task DeleteProduct(Guid productId)
-    {
-        await repository.DeleteProduct(productId);
-    }
-
     public async Task<Product> PatchProductById(Guid productId, Product product)
     {
-        ValidateProduct(product);
+        ProductValidator.Validate(product);
         return await repository.PatchProductById(productId, product);
     }
-
-    private void ValidateProduct(Product product)
+}
+internal static class ProductValidator
+{
+    public static void Validate(Product product)
     {
         if (string.IsNullOrWhiteSpace(product.Name))
             throw new ArgumentException("El nombre del producto es obligatorio.");

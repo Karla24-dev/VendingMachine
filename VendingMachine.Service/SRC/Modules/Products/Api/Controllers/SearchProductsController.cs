@@ -6,19 +6,19 @@ namespace VendingMachine.Products.Api;
 
 [ApiController]
 [Route("Products")]
-public class SearchProductsController(ProductService service) : ControllerBase
+public class SearchProductsController(ISearchProductsService iService) : ControllerBase
 {
     [HttpGet]
     public async Task<ActionResult> ShowProducts()
     {
-        var products = await service.ShowProducts();
+        var products = await iService.ShowProducts();
         return Ok(products);
     }
 
     [HttpGet("{id}")]
     public async Task<ActionResult> FindProductById(Guid id)
     {
-        var product = await service.FindProductById(id);
+        var product = await iService.FindProductById(id);
         if (product == null)
             return NotFound();
 

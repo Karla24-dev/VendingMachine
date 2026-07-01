@@ -6,7 +6,7 @@ namespace VendingMachine.Products.Api;
 
 [ApiController]
 [Route("Products")]
-public class CreateProductsController(ProductService service) : ControllerBase
+public class CreateProductsController(ICreateProductsService iService) : ControllerBase
 {
     [HttpPost]
     public async Task<ActionResult> CreateProduct([FromBody] CreateProductRequest request)
@@ -21,7 +21,7 @@ public class CreateProductsController(ProductService service) : ControllerBase
             request.ImageUrl
         );
 
-        var created = await service.CreateProduct(product);
+        var created = await iService.CreateProduct(product);
         return Ok(created);
     }
 }
