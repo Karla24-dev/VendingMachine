@@ -15,12 +15,12 @@ public static class DependencyInjection
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
         // Google Sheets Service
-        services.AddSingleton<Factory>();
+        services.AddSingleton<ConnectionStringBuilder>();
         // Repositories
         services.AddDbContext<VendingDbContext>((serviceProvider, options) =>
                 {
-                    var factory = serviceProvider.GetRequiredService<Factory>();
-                    options.UseNpgsql(factory.GetConnectionString());
+                    var connectionStringBuilder = serviceProvider.GetRequiredService<ConnectionStringBuilder>();
+                    options.UseNpgsql(connectionStringBuilder.GetConnectionString());
                 });
         services.AddScoped<IMachineRepository, EfMachineRepository>();
 
