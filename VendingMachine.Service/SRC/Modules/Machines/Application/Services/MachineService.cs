@@ -1,9 +1,7 @@
-namespace VendingMachine.Service.Modules.Machines.Application.Services;
+using VendingMachine.Machines.Api;
+using VendingMachine.Machines.Domain;
 
-using VendingMachine.Service.Domain.Machines;
-using VendingMachine.Service.Modules.Machines.Application.Interfaces;
-using VendingMachine.Service.Machines.Service;
-
+namespace VendingMachine.Machines.Application;
 
 public class MachineService(IMachineRepository repository)
 {

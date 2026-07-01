@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+
 using VendingMachine.Inventories.Domain;
+using VendingMachine.Machines.Domain;
 using VendingMachine.Products.Domain;
-using VendingMachine.Service.Domain.Machines;
 
 namespace VendingMachine.Service.Shared;
 

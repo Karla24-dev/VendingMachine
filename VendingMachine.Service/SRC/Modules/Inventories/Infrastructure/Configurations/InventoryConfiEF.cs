@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using VendingMachine.Inventories.Domain;
-using VendingMachine.Service.Domain.Machines;
+using VendingMachine.Machines.Domain;
 
 namespace VendingMachine.Inventories.Infraestructure;
 

@@ -1,6 +1,6 @@
-using VendingMachine.Service.Service.Machines;
+using VendingMachine.Machines.Domain;
 
-namespace VendingMachine.Service.Machines.Service;
+namespace VendingMachine.Machines.Api;
 
 public class CreateMachineRequest
 {

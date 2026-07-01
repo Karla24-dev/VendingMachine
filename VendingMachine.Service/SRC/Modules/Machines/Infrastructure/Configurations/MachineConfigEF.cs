@@ -1,8 +1,8 @@
-namespace VendingMachine.Service.Shared;
+namespace VendingMachine.Machines.Infrastructure;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using VendingMachine.Service.Domain.Machines;
+using VendingMachine.Machines.Domain;
 
 public class MachineConfigEF : IEntityTypeConfiguration<Machine>
 {

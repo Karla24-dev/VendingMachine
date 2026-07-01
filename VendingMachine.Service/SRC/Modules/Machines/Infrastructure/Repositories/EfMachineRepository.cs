@@ -1,8 +1,7 @@
-namespace VendingMachine.Service.Shared.db.Service;
-
 using Microsoft.EntityFrameworkCore;
-using VendingMachine.Service.Domain.Machines;
-using VendingMachine.Service.Modules.Machines.Application.Interfaces;
+using VendingMachine.Machines.Domain;
+
+namespace VendingMachine.Service.Shared.db.Service;
 
 public class EfMachineRepository(VendingDbContext db) : IMachineRepository
 {

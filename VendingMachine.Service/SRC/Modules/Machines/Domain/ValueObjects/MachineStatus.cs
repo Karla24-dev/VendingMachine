@@ -1,5 +1,5 @@
 
-namespace  VendingMachine.Service.Service.Machines;
+namespace VendingMachine.Machines.Domain;
 
 public enum MachineStatus
 {

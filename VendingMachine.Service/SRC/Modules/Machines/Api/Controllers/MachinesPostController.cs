@@ -1,8 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using VendingMachine.Service.Machines.Service;
-using VendingMachine.Service.Modules.Machines.Application.Services;
+using VendingMachine.Machines.Application;
 
-namespace VendingMachine.Service.SRC.Modules.Machines.Api;
+namespace VendingMachine.Machines.Api;
 
 [ApiController]
 [Route("Machines")]

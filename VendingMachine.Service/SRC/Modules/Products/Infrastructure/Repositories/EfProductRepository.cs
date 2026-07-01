@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using VendingMachine.Products.Domain;
 using VendingMachine.Service.Shared;
 
-namespace VendingMachine.Products.Servis;
+namespace VendingMachine.Products.Infraestructure;
 
 public class EfProductRepository(VendingDbContext db) : IProductRepository
 {

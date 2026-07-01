@@ -1,6 +1,6 @@
 using VendingMachine.Products.Domain;
 
-namespace VendingMachine.Products.Servis;
+namespace VendingMachine.Products.Application;
 
 public class ProductService(IProductRepository repository)
 {

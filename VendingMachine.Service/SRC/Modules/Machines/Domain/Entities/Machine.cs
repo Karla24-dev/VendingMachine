@@ -1,6 +1,5 @@
-using VendingMachine.Service.Service.Machines;
 
-namespace VendingMachine.Service.Domain.Machines;
+namespace VendingMachine.Machines.Domain;
 
 public class Machine(
     string name,

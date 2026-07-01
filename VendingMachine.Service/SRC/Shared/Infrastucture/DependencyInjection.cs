@@ -1,11 +1,14 @@
-using VendingMachine.Service.Modules.Machines.Application.Interfaces;
-using VendingMachine.Service.Modules.Machines.Application.Services;
 using VendingMachine.Service.Shared;
 using Microsoft.EntityFrameworkCore;
 using VendingMachine.Service.Shared.db.Service;
-using VendingMachine.Products.Servis;
-using VendingMachine.Inventories.Servis;
-using VendingMachine.Inventories.Servis.Strategies;
+using VendingMachine.Machines.Domain;
+using VendingMachine.Machines.Application;
+using VendingMachine.Products.Domain;
+using VendingMachine.Products.Application;
+using VendingMachine.Products.Infraestructure;
+using VendingMachine.Inventories.Domain;
+using VendingMachine.Inventories.Application;
+using VendingMachine.Inventories.Infraestructure;
 
 namespace VendingMachine.Service.Configuration;
 

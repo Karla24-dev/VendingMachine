@@ -1,6 +1,5 @@
-namespace VendingMachine.Service.Modules.Machines.Application.Interfaces;
 
-using VendingMachine.Service.Domain.Machines;
+namespace VendingMachine.Machines.Domain;
 
 public interface IMachineRepository
 {
