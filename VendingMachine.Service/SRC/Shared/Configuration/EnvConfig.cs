@@ -1,5 +1,5 @@
 
-namespace VendingMachine.Service.Shared;
+namespace VendingMachine.Shared.Configuration;
 
 public static class EnvConfig
 {

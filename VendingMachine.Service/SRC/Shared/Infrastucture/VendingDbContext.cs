@@ -4,7 +4,7 @@ using VendingMachine.Inventories.Domain;
 using VendingMachine.Machines.Domain;
 using VendingMachine.Products.Domain;
 
-namespace VendingMachine.Service.Shared;
+namespace VendingMachine.Shared.Infrastructure;
 
 public class VendingDbContext(DbContextOptions<VendingDbContext> options) : DbContext(options)
 {

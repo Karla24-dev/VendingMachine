@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using VendingMachine.Inventories.Domain;
-using VendingMachine.Service.Shared;
+using VendingMachine.Shared.Infrastructure;
 
 namespace VendingMachine.Inventories.Infraestructure;
 

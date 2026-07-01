@@ -1,4 +1,4 @@
-namespace VendingMachine.Service.Configuration;
+namespace VendingMachine.Shared.Configuration;
 
 public static class CorsConfiguration
 {

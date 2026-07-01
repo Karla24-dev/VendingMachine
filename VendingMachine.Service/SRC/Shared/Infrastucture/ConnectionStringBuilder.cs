@@ -1,5 +1,7 @@
 
-namespace VendingMachine.Service.Shared;
+using VendingMachine.Shared.Configuration;
+
+namespace VendingMachine.Shared.Infrastructure;
 
 public class ConnectionStringBuilder(IConfiguration config)
 {

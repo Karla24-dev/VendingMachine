@@ -1,6 +1,4 @@
-using VendingMachine.Service.Shared;
 using Microsoft.EntityFrameworkCore;
-using VendingMachine.Service.Shared.db.Service;
 using VendingMachine.Machines.Domain;
 using VendingMachine.Machines.Application;
 using VendingMachine.Products.Domain;
@@ -9,8 +7,9 @@ using VendingMachine.Products.Infraestructure;
 using VendingMachine.Inventories.Domain;
 using VendingMachine.Inventories.Application;
 using VendingMachine.Inventories.Infraestructure;
+using VendingMachine.Machines.Infrastructure;
 
-namespace VendingMachine.Service.Configuration;
+namespace VendingMachine.Shared.Infrastructure;
 
 
 public static class DependencyInjection
