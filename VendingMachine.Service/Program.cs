@@ -1,4 +1,6 @@
-using VendingMachine.Service.Configuration;
+using Scalar.AspNetCore;
+using VendingMachine.Shared.Configuration;
+using VendingMachine.Shared.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // ========================================
 
 builder.Services.AddControllers();
-builder.Services.AddSwaggerConfiguration();
+builder.Services.AddScalarConfiguration();
 builder.Services.AddCorsConfiguration();
 builder.Services.AddApplicationServices();
 
@@ -19,7 +21,7 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwaggerConfiguration();
+    app.UseScalarConfiguration();
 }
 
 app.UseHttpsRedirection();
