@@ -6,7 +6,7 @@ namespace VendingMachine.Products.Api;
 
 [ApiController]
 [Route("Products")]
-public class ProductsController(ProductService service) : ControllerBase
+public class UpDateProductsController(ProductService service) : ControllerBase
 {
     [HttpPost]
     public async Task<ActionResult> CreateProduct([FromBody] CreateProductRequest request)
