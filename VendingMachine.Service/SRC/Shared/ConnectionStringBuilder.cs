@@ -1,11 +1,8 @@
 
 namespace VendingMachine.Service.Shared;
 
-public class Factory(IConfiguration config)
+public class ConnectionStringBuilder(IConfiguration config)
 {
-    
-
-
     public string GetConnectionString()
     {
         var url = config[EnvConfig.Url];

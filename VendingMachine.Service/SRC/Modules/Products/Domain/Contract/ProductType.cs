@@ -1,6 +1,6 @@
 namespace VendingMachine.Products.Domain;
 enum ProductType
 {
-    kid,
+    kit,
     Single
 }
